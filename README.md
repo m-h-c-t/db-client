@@ -1,19 +1,19 @@
-# jacksmhtools-client
-Unofficial client for jack's mousehunt database
+# db-client
+Client for the [MHCT database](https://github.com/m-h-c-t/mhct-db-docker)
 
 ## Usage
 
 ```shell
-jmht-cli <command> [options]
+mhct-cli <command> [options]
 
 Commands:
-  jmht-cli attr              compute attraction rate for setup
+  mhct-cli attr              compute attraction rate for setup
                                                            [aliases: attraction]
-  jmht-cli id <type> <name>  get the id of item named "name"
-  jmht-cli loot              display loot drops for setup
-  jmht-cli pop               display mouse population for setup
+  mhct-cli id <type> <name>  get the id of item named "name"
+  mhct-cli loot              display loot drops for setup
+  mhct-cli pop               display mouse population for setup
                                                            [aliases: population]
-  jmht-cli power [mouse]     compute mouse power stats
+  mhct-cli power [mouse]     compute mouse power stats
 
 Options:
   --help         Show help                                             [boolean]
@@ -29,7 +29,7 @@ Computes the attraction rate for specific setup, with correction for attraction 
 #### Example 
 
 ```shell
-jmht-cli attr --vars.cheese.gilded --vars.location."town of gnawnia"
+mhct-cli attr --vars.cheese.gilded --vars.location."town of gnawnia"
 #{
 #  "attraction": 0.8451512474057308,
 #  "raw_attraction": 0.8875282376694548,
@@ -45,7 +45,7 @@ Loot drops for specific setup.
 #### Example
 
 ```shell
-jmht-cli loot --vars.cheese.undead\ emmental --vars.location.catacombs --vars.mouse."Zombot Unipire" --min_qty 1 --exclude "Cursed Gold"
+mhct-cli loot --vars.cheese.undead\ emmental --vars.location.catacombs --vars.mouse."Zombot Unipire" --min_qty 1 --exclude "Cursed Gold"
 #[
 #  {
 #    "id": 197,
@@ -75,7 +75,7 @@ Mouse population for specific setup
 #### Example
 
 ```shell
-jmht-cli pop --vars.cheese.sb --vars.location.living\ garden
+mhct-cli pop --vars.cheese.sb --vars.location.living\ garden
 #[
 #  {
 #    "mouse": "Strawberry Hotcakes",
@@ -129,7 +129,7 @@ Compute mouse power given power effectiveness and power types.
 #### Example
 
 ```shell
-jmht-cli power shadow\ stalker --forgotten --eff 0.5
+mhct-cli power shadow\ stalker --forgotten --eff 0.5
 #{
 #  "mousePower": 28184,
 #  "effectiveness": 0.5,

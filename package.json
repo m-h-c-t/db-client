@@ -1,12 +1,23 @@
 {
-  "name": "jacksmhtools-client",
+  "$schema": "http://json.schemastore.org/package",
+  "name": "@mhct/db-client",
+  "description": "Client for MHCT database",
   "version": "0.1.2",
-  "description": "Unofficial client for jack's mousehunt tools",
-  "author": "Geno Roupsky <geno@roupsky.name> (https://github.com/groupsky)",
   "license": "MIT",
+  "author": {
+    "name": "Geno Roupsky",
+    "email": "geno@roupsky.name",
+    "url": "https://github.com/groupsky"
+  },
+  "contributors": [
+    {
+      "name": "Hank McCord",
+      "url": "https://github.com/hymccord"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/groupsky/jacksmhtools-client.git"
+    "url": "git://github.com/m-h-c-t/db-client.git"
   },
   "devDependencies": {
     "standard": "*",
@@ -21,10 +32,18 @@
     "yargs": "^10.0.3"
   },
   "bin": {
-    "jmht-cli": "./cli.js"
+    "mhct-cli": "./cli.js"
   },
   "main": "index.js",
   "scripts": {
     "test": "standard && tape 'tests/**/*.js'"
-  }
+  },
+  "keywords": [
+    "mhct",
+    "mousehunt"
+  ],
+  "bugs": {
+    "url": "https://github.com/m-h-c-t/db-client/issues"
+  },
+  "homepage": "https://github.com/m-h-c-t/db-client#README"
 }
