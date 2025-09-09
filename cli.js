@@ -2,7 +2,7 @@
 
 var pkg = require('./package.json')
 
-process.title = 'jmht-cli'
+process.title = 'mhct-cli'
 
 /* eslint-disable no-unused-expressions */
 // this actually makes the whole parsing magic of yargs run
